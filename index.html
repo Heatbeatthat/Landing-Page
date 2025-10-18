@@ -3,445 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desbloqueie R$ 5.000 a R$ 10.000+ com IA - Mesmo do Zero!</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Ganhe Dinheiro com IA: Seu Guia Prático</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f8f8; /* Cinza claro */
-            color: #1a365d; /* Azul profissional */
-        }
-        .btn-primary {
-            background-color: #ff6b35; /* Laranja de conversão */
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .btn-primary:hover {
-            background-color: #e05a2e;
-        }
-        .section-title {
-            font-size: 2.25rem; /* text-4xl */
-            font-weight: 700; /* font-bold */
-            color: #1a365d;
-            margin-bottom: 1.5rem;
-        }
-        .card {
-            background-color: white;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .gradient-bg {
-            background: linear-gradient(to right, #1a365d, #2a528a);
-        }
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px; /* full rounded */
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .badge-premium {
-            background-color: #d1fae5; /* green-100 */
-            color: #065f46; /* green-800 */
-        }
-        .badge-tested {
-            background-color: #bfdbfe; /* blue-100 */
-            color: #1e40af; /* blue-800 */
-        }
-        .logo-placeholder {
-            height: 40px;
-            width: 120px;
-            background-color: #e2e8f0; /* gray-200 */
-            border-radius: 0.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            color: #64748b; /* gray-500 */
-        }
-        .countdown-timer span {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ff6b35;
-            margin: 0 0.5rem;
-        }
-        .countdown-timer small {
-            display: block;
-            font-size: 0.875rem;
-            color: #4a5568;
-        }
-        .floating-cta {
-            position: fixed;
-            bottom: 1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
-        @media (min-width: 768px) {
-            .floating-cta {
-                display: none; /* Hide on larger screens if desired */
+    <!-- Configuração de cor e fonte para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4f46e5', // Indigo 600
+                        'secondary': '#facc15', // Amber 400 (Amarelo vibrante)
+                        'dark-bg': '#1f2937', // Gray 800
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
             }
+        }
+    </script>
+    <style>
+        /* Fonte Inter (Melhor para legibilidade) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        /* Efeito de brilho sutil para a seção Hero */
+        .hero-glow {
+            box-shadow: 0 0 100px rgba(79, 70, 229, 0.4);
+        }
+        /* Efeito de sombra e elevação para o botão */
+        .btn-cta {
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        .btn-cta:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="font-sans bg-gray-50">
 
-    <!-- Floating CTA for Mobile -->
-    <div class="floating-cta md:hidden">
-        <a href="https://pay.kiwify.com.br/OVhVViy" class="btn-primary w-full block text-center">GARANTIR MEU ACESSO AGORA!</a>
-    </div>
-
-    <!-- CABEÇALHO IMPACTANTE -->
-    <header class="gradient-bg text-white py-16 px-4 sm:px-6 lg:px-8 text-center rounded-b-3xl shadow-xl">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-                Desbloqueie <span class="text-yellow-300">R$ 5.000 a R$ 10.000+</span> Por Mês Prestando Serviços de IA - Mesmo Começando do Zero!
-            </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-8 opacity-90">
-                O guia definitivo com as estratégias e ferramentas SECRETAS que profissionais de elite estão usando para dominar a Inteligência Artificial e multiplicar seus ganhos em 2025
+    <!-- Seção HERO - Gancho e Promessa -->
+    <header class="bg-dark-bg text-white pt-16 pb-20 sm:pt-24 sm:pb-32 overflow-hidden relative">
+        <div class="absolute inset-0 z-0 bg-gradient-to-br from-indigo-900 to-gray-900 opacity-90"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Gancho/Polêmica -->
+            <p class="text-secondary font-bold text-lg sm:text-xl uppercase mb-3">
+                Polêmica: A IA não vai roubar seu trabalho, mas quem a usa vai.
             </p>
-            <a href="https://pay.kiwify.com.br/OVhVViy" class="btn-primary inline-block text-lg sm:text-xl transform hover:scale-105">
-                QUERO LUCRAR COM IA AGORA!
-            </a>
+
+            <!-- Título Principal (Dor/Desejo/Promessa) -->
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                PARE de ser um espectador! Use a IA para lucrar
+                <span class="text-secondary block sm:inline-block">R$100 a R$300/dia</span>
+            </h1>
+            
+            <!-- Subtítulo (Identificação) -->
+            <p class="text-indigo-200 text-xl sm:text-2xl max-w-3xl mx-auto mb-10">
+                O Guia Prático que revela o caminho mais rápido para você ter uma Renda Crescente trabalhando de casa, mesmo que você "não entenda nada de tecnologia".
+            </p>
+
+            <!-- Box do Ebook e CTA -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <!-- Imagem do Produto (Placeholder) -->
+                <div class="w-48 h-64 bg-primary rounded-xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-300 hero-glow border-4 border-secondary/50 flex items-center justify-center p-4">
+                    <p class="text-white text-center font-bold text-xl leading-snug">EBOOK:<br>Ganhe Dinheiro com IA</p>
+                </div>
+                
+                <!-- Box de Preço e CTA -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-2xl text-gray-900 max-w-sm w-full md:w-auto transform hover:scale-[1.02] transition-transform duration-300">
+                    <p class="text-3xl font-bold mb-2">Preço de Lançamento:</p>
+                    <p class="text-gray-500 line-through text-xl">R$ 97,00</p>
+                    <p class="text-6xl font-extrabold text-primary mb-6">
+                        <span class="text-3xl align-top">R$</span>15,99
+                    </p>
+                    <!-- CTA atualizado para o link de pagamento -->
+                    <a href="https://pay.kiwify.com.br/OVhVViy" class="btn-cta bg-secondary text-dark-bg font-extrabold text-xl py-4 px-8 rounded-full w-full block text-center uppercase hover:bg-yellow-400">
+                        Quero Meu Guia e o Bônus!
+                    </a>
+                </div>
+            </div>
+
         </div>
     </header>
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-        <!-- SEÇÃO DE CREDIBILIDADE -->
-        <section class="text-center py-12">
-            <div class="flex flex-wrap justify-center items-center gap-4 mb-8">
-                <span class="badge badge-premium">
-                    ✅ Conteúdo Premium Validado por Especialistas
-                </span>
-                <span class="badge badge-tested">
-                    🚀 Método Comprovado: Milhares Já Estão Usando!
-                </span>
-            </div>
-            <h3 class="text-xl font-semibold mb-6 text-gray-700">As Ferramentas de IA Mais Cobiçadas Reveladas no Ebook:</h3>
-            <div class="flex flex-wrap justify-center items-center gap-6">
-                <div class="logo-placeholder">ChatGPT</div>
-                <div class="logo-placeholder">Claude</div>
-                <div class="logo-placeholder">Midjourney</div>
-                <div class="logo-placeholder">DALL-E</div>
-                <div class="logo-placeholder">Jasper AI</div>
-                <div class="logo-placeholder">Canva IA</div>
-            </div>
-        </section>
-
-        <!-- APRESENTAÇÃO DO PROBLEMA -->
-        <section class="py-16">
-            <h2 class="section-title text-center">Você Está Deixando Escapar a Maior Oportunidade Financeira da Década?</h2>
-            <p class="text-lg text-center mb-10 text-gray-600 max-w-3xl mx-auto">
-                Enquanto a Inteligência Artificial revoluciona o mercado, você pode estar se sentindo ameaçado ou, pior, sem saber como capitalizar esse tsunami de oportunidades.
-            </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card text-center">
-                    <div class="text-4xl mb-4 text-red-500">📉</div>
-                    <h3 class="font-bold text-xl mb-2">Escassez de Talentos</h3>
-                    <p class="text-gray-600">85% das empresas buscam IA, mas 90% não encontram profissionais qualificados. A demanda é GIGANTESCA!</p>
-                </div>
-                <div class="card text-center">
-                    <div class="text-4xl mb-4 text-red-500">📈</div>
-                    <h3 class="font-bold text-xl mb-2">Demanda Explodindo</h3>
-                    <p class="text-gray-600">A procura por serviços com IA cresceu 300% em 2 anos. Você está preparado para surfar essa onda ou vai ficar para trás?</p>
-                </div>
-                <div class="card text-center">
-                    <div class="text-4xl mb-4 text-red-500">⏳</div>
-                    <h3 class="font-bold text-xl mb-2">Risco de Obsolescência</h3>
-                    <p class="text-gray-600">Quem não dominar a IA será engolido pela revolução. Garanta seu futuro AGORA!</p>
-                </div>
-                <div class="card text-center">
-                    <div class="text-4xl mb-4 text-red-500">💸</div>
-                    <h3 class="font-bold text-xl mb-2">Mercado Congelado?</h3>
-                    <p class="text-gray-600">Cansado de freelancers "comuns" que não conseguem precificar? Destaque-se com serviços de ALTO VALOR!</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- APRESENTAÇÃO DA SOLUÇÃO -->
-        <section class="py-16 bg-blue-50 rounded-2xl shadow-inner">
-            <h2 class="section-title text-center">ATENÇÃO: A IA Não Vai Tomar Seu Emprego - Mas Quem Souber USÁ-LA, SIM!</h2>
-            <p class="text-lg text-center mb-10 text-gray-700 max-w-3xl mx-auto">
-                Este e-book é o SEU mapa do tesouro para dominar a IA, transformando sua carreira, entregando mais resultados em tempo recorde e cobrando o PREÇO que você realmente MERECE.
-            </p>
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="card flex items-start p-6">
-                    <div class="text-4xl text-orange-500 mr-4">✨</div>
-                    <div>
-                        <h3 class="font-bold text-xl mb-2">Domine 15+ Ferramentas de Ponta</h3>
-                        <p class="text-gray-600">Transforme suas habilidades! Aprenda a usar as IAs mais poderosas para serviços que vão do copywriting ao design, multiplicando sua produtividade.</p>
-                    </div>
-                </div>
-                <div class="card flex items-start p-6">
-                    <div class="text-4xl text-orange-500 mr-4">💰</div>
-                    <div>
-                        <h3 class="font-bold text-xl mb-2">Precifique Seus Serviços com Maestria</h3>
-                        <p class="text-gray-600">Descubra como cobrar por VALOR, não por hora! Crie "pacotes inteligentes" que atraem clientes premium e garantem seu lucro.</p>
-                    </div>
-                </div>
-                <div class="card flex items-start p-6">
-                    <div class="text-4xl text-orange-500 mr-4">✍️</div>
-                    <div>
-                        <h3 class="font-bold text-xl mb-2">Prompt Engineering: Seu Segredo para Resultados Épicos</h3>
-                        <p class="text-gray-600">Comande a IA! Técnicas avançadas para extrair o máximo de cada ferramenta, gerando resultados profissionais e de ALTA QUALIDADE que impressionam.</p>
-                    </div>
-                </div>
-                <div class="card flex items-start p-6">
-                    <div class="text-4xl text-orange-500 mr-4">⚙️</div>
-                    <div>
-                        <h3 class="font-bold text-xl mb-2">Automatize e ESCALE Seu Negócio Sem Limites</h3>
-                        <p class="text-gray-600">Chega de trabalhar demais! Aprenda a automatizar seu próprio negócio, liberando tempo valioso para você escalar e viver o que importa.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- APRESENTAÇÃO DE RESULTADOS POSSÍVEIS -->
-        <section class="py-16">
-            <h2 class="section-title text-center">Imagine Seus Ganhos Explodindo com Serviços de IA!</h2>
-            <p class="text-lg text-center mb-10 text-gray-600 max-w-3xl mx-auto">
-                Prepare-se para uma transformação radical na sua forma de trabalhar e nos seus resultados financeiros com a inteligência artificial.
-            </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-orange-600">Copywriting Magnético</h3>
-                    <p class="text-gray-600">De R$ 50 para R$ 300 por produto! Aumente suas conversões em 40% com textos gerados por IA em minutos.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-orange-600">Criação de Conteúdo TURBO</h3>
-                    <p class="text-gray-600">Reduza o tempo de criação de 4 horas para APENAS 45 minutos, mantendo qualidade e relevância IMPECÁVEIS.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-orange-600">Business Intelligence LUCRATIVO</h3>
-                    <p class="text-gray-600">Fature R$ 2.500/mês por restaurante, entregando 25% de aumento na margem de lucro dos seus clientes. Seja INDISPENSÁVEL!</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-orange-600">Marketing Automation AVANÇADO</h3>
-                    <p class="text-gray-600">Implementações completas que valem de R$ 8.000 a R$ 25.000! Otimize funis de vendas e veja os resultados aparecerem.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-orange-600">Design com IA: Velocidade e Originalidade</h3>
-                    <p class="text-gray-600">Crie 10x mais imagens no mesmo tempo! Cobre R$ 80-200 por cada design EXCLUSIVO e profissional.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- O QUE VOCÊ VAI APRENDER (Conteúdo Detalhado) -->
-        <section class="py-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl shadow-inner">
-            <h2 class="section-title text-center">Dentro do Ebook "Ganhe Dinheiro com IA", Você Vai Desvendar:</h2>
-            <p class="text-lg text-center mb-10 text-gray-700 max-w-3xl mx-auto">
-                Um mapa detalhado, do absoluto zero ao avançado, para você DOMINAR a inteligência artificial e aplicá-la em serviços de ALTO VALOR que o mercado está sedento!
-            </p>
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <div class="card p-6">
-                    <h3 class="font-bold text-2xl mb-4 text-blue-700">Capítulo 1: O Explosivo Cenário da IA e Seu Futuro de Sucesso</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Descomplicando a IA: O que é e como ela vai transformar SUA vida (sem jargões chatos!)</li>
-                        <li>As Tendências Explosivas que Estão Criando Milionários: hiperautomação, personalização em massa, análise preditiva.</li>
-                        <li>Por que AGORA é a sua ÚNICA chance de surfar essa onda e garantir seu lugar no futuro.</li>
-                        <li>Casos de Sucesso REAIS: Veja como a Ana, uma redatora, pulou de R$ 3.000 para R$ 15.000/mês com IA! VOCÊ PODE SER O PRÓXIMO!</li>
-                    </ul>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-2xl mb-4 text-blue-700">Capítulo 2: Decifrando Oportunidades de Ouro e Lucros Altos</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Criação de Conteúdo que Vende: Copywriting inteligente, roteiros de vídeo hipnotizantes, conteúdo SEO que domina o Google.</li>
-                        <li>Design Acelerado: Geração de imagens comerciais de tirar o fôlego, identidade visual express, mockups automatizados.</li>
-                        <li>Análise de Dados que Geram Lucro: Dashboards inteligentes, análise preditiva para prever o futuro, monitoramento de reputação que protege sua marca.</li>
-                        <li>Marketing Automation Que Multiplica Vendas: E-mails inteligentes que convertes, chatbots de vendas 24/7, personalização em massa.</li>
-                        <li>Atendimento Impecável 24/7: Chatbots conversacionais que encantam, suporte automatizado que resolve tudo, análise de satisfação para fidelizar clientes.</li>
-                    </ul>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-2xl mb-4 text-blue-700">Capítulo 3: As Ferramentas ESSENCIAIS de IA que Você Precisa Dominar</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Para Conteúdo Inovador: ChatGPT, Claude, Jasper AI, Copy.ai + técnicas de prompt engineering que farão você parecer um gênio!</li>
-                        <li>Para Design de Impacto: Midjourney, DALL-E, Canva IA, Adobe Firefly + estratégias de geração visual que deixarão seus concorrentes no chinelo.</li>
-                        <li>Para Dados Estratégicos: Google Looker Studio, Power BI, Tableau + o segredo para criar dashboards inteligentes que revelam fortunas.</li>
-                        <li>Para Automação Sem Limites: Zapier, Make, ActiveCampaign + fluxos de trabalho OTIMIZADOS que te dão liberdade.</li>
-                        <li>Para Desenvolvimento Acelerado: GitHub Copilot, Replit AI + a fórmula para criar protótipos em velocidade da luz.</li>
-                    </ul>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-2xl mb-4 text-blue-700">Capítulo 4: O Guia Completo Para Atrair Clientes e VENDER MUITO!</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Posicionamento Estratégico: Torne-se um especialista de nicho, não um generalista esquecido. Destaque-se!</li>
-                        <li>Precificação por Valor: Aprenda como cobrar R$ 5.000-20.000 por projeto e seja valorizado como NUNCA antes!</li>
-                        <li>Construa Autoridade Inabalável: O segredo para atrair clientes que confiam em você através de conteúdo educativo.</li>
-                        <li>Canais de Venda Explosivos: LinkedIn, plataformas de freelancer de alto valor, networking estratégico que gera oportunidades.</li>
-                        <li>Supere Objeções e Feche Vendas: As técnicas infalíveis para calar a concorrência e fechar mais negócios do que você imagina.</li>
-                    </ul>
-                </div>
-                <div class="card p-6 col-span-full mx-auto max-w-2xl">
-                    <h3 class="font-bold text-2xl mb-4 text-blue-700">Capítulo 5: Desafios, Escalada e Liberdade Financeira com IA</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Mantenha-se à Frente: Como se atualizar com a evolução frenética da IA e nunca ficar para trás.</li>
-                        <li>Estratégias para Escalar SEU Negócio: Automatize tudo, crie infoprodutos que vendem enquanto você dorme!</li>
-                        <li>Construa Sua Equipe dos Sonhos: Equipe virtual e modelos de assinatura recorrente para lucros crescentes.</li>
-                        <li>Ética e Responsabilidade: Use a IA de forma inteligente e construa uma reputação impecável.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- BÔNUS EXCLUSIVOS -->
-        <section class="py-16 text-center bg-yellow-50 rounded-2xl shadow-inner">
-            <h2 class="section-title">GARANTA SEU BÔNUS EXCLUSIVO AGORA!</h2>
-            <p class="text-lg mb-8 text-gray-700">Ao adquirir o e-book HOJE, você leva este bônus INCRÍVEL:</p>
-            <div class="grid md:grid-cols-1 gap-8 max-w-xl mx-auto">
-                <div class="card p-6 border-2 border-yellow-400">
-                    <div class="text-5xl mb-4">🎁</div>
-                    <h3 class="font-bold text-2xl mb-2 text-yellow-700">Bônus Único: Biblioteca com 30+ Prompts Profissionais TESTADOS e Validados!</h3>
-                    <p class="text-gray-700 text-lg">Economize HORAS de trabalho e garanta resultados de alta qualidade com prompts PRONTOS para usar em qualquer situação. Imagine o tempo e dinheiro que você vai economizar! <span class="font-bold">(Valor real: R$ 197 - GRATUITO PARA VOCÊ HOJE!)</span></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- URGÊNCIA E ESCASSEZ -->
-        <section class="py-16 text-center bg-red-50 rounded-2xl shadow-inner">
-            <h2 class="section-title text-red-700">OFERTA IRRECUSÁVEL: Última Chance de Aproveitar!</h2>
-            <p class="text-2xl font-bold mb-4 text-red-600">Esta oferta EXCLUSIVA termina em:</p>
-            <div id="countdown" class="countdown-timer flex justify-center items-end mb-8">
-                <!-- Countdown will be inserted here by JavaScript -->
-            </div>
-            <p class="text-xl font-semibold mb-4 text-gray-700">
-                <span class="text-red-600 font-bold">Apenas as primeiras 300 cópias</span> com este preço IMPERDÍVEL! Não perca!
-            </p>
-            <p class="text-lg text-gray-600">O preço promocional é por tempo EXTREMAMENTE limitado - o valor normal de R$297 volta em breve. Não deixe para depois!</p>
-        </section>
-
-        <!-- PRECIFICAÇÃO ESTRATÉGICA -->
-        <section id="buy-now" class="py-16 text-center">
-            <h2 class="section-title">SEU FUTURO Começa AGORA! Invista em Você!</h2>
-            <div class="card max-w-md mx-auto p-8 bg-blue-100 border-4 border-blue-400">
-                <p class="text-2xl text-gray-500 line-through mb-2">De: R$ 297</p>
-                <p class="text-5xl font-extrabold text-orange-600 mb-4">Por APENAS: R$ 15,99</p>
-                <p class="text-xl font-semibold text-gray-700 mb-6">Ou 3x de R$ 5,33 - Menos que um cafezinho por dia!</p>
-                <p class="text-lg text-green-700 font-bold mb-6">Você economiza EXATOS R$ 281,01! Não deixe essa oportunidade escapar!</p>
-                <a href="https://pay.kiwify.com.br/OVhVViy" class="btn-primary inline-block text-2xl sm:text-3xl transform hover:scale-105 w-full">
-                    SIM! QUERO MEU EBOOK COM DESCONTO AGORA!
-                </a>
-            </div>
-        </section>
-
-        <!-- SEGURANÇA NA COMPRA -->
-        <section class="py-12 text-center bg-gray-100 rounded-2xl shadow-inner">
-            <h2 class="text-3xl font-bold mb-4 text-green-700">Sua Compra é 100% SEGURA! Risco ZERO!</h2>
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-                Seu pagamento é processado através das plataformas mais seguras do Brasil. Seus dados estão TOTALMENTE protegidos. Receba seu produto IMEDIATAMENTE após a confirmação!
-            </p>
-            <div class="flex justify-center items-center gap-6 mt-6">
-                <img src="https://placehold.co/100x40/000000/FFFFFF?text=SSL" alt="Certificado SSL" class="rounded-md">
-                <img src="https://placehold.co/100x40/000000/FFFFFF?text=Pagamento+Seguro" alt="Selo de Pagamento Seguro" class="rounded-md">
-            </div>
-        </section>
-
-        <!-- GARANTIA DE 7 DIAS -->
-        <section class="py-12 text-center bg-green-50 rounded-2xl shadow-inner">
-            <h2 class="text-3xl font-bold mb-4 text-green-700">Sua Satisfação é Nossa Prioridade: Garantia Incondicional de 7 Dias!</h2>
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-                Temos tanta certeza da qualidade e do valor que este e-book entregará que oferecemos uma <strong>garantia de satisfação total de 7 dias</strong>. Se por qualquer motivo você não estiver 100% satisfeito com o conteúdo, basta nos enviar um e-mail dentro deste período e faremos o reembolso integral do seu investimento, sem perguntas! Seu risco é ZERO.
-            </p>
-            <div class="flex justify-center items-center gap-6 mt-6">
-                <img src="https://placehold.co/100x40/000000/FFFFFF?text=Garantia" alt="Selo de Garantia" class="rounded-md">
-                <img src="https://placehold.co/100x40/000000/FFFFFF?text=Reembolso" alt="Selo de Reembolso" class="rounded-md">
-            </div>
-        </section>
-
-        <!-- FAQ (Objeções Comuns) -->
-        <section class="py-16">
-            <h2 class="section-title text-center">Suas Dúvidas Respondidas (FAQ)</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-blue-700">Preciso ser um gênio da programação ou ter conhecimento técnico em IA?</h3>
-                    <p class="text-gray-700">Absolutamente NÃO! O ebook foi criado pensando em VOCÊ, iniciante, com linguagem acessível e exemplos práticos para aprender do ZERO e sem complicação.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-blue-700">Em quanto tempo verei resultados expressivos?</h3>
-                    <p class="text-gray-700">Você pode começar a aplicar as técnicas HOJE mesmo! Muitos de nossos alunos já veem resultados consistentes em apenas 30-60 dias, dependendo da sua dedicação. Sua ação é a chave!</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-blue-700">Serve para quem nunca prestou serviços online na vida?</h3>
-                    <p class="text-gray-700">SIM! Este é o roteiro completo, passo a passo, desde o absoluto básico até as estratégias mais avançadas para você atrair seus PRIMEIROS clientes e construir um negócio lucrativo.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-blue-700">E se eu tiver dificuldade em implementar as estratégias?</h3>
-                    <p class="text-gray-700">NÃO SE PREOCUPE! O ebook vem recheado de exemplos práticos, templates prontos para usar e prompts testados que facilitarão CADA etapa da sua implementação. É impossível não conseguir!</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-2 text-blue-700">A IA vai realmente substituir meu trabalho ou me ajudar?</h3>
-                    <p class="text-gray-700">Pelo contrário! A IA não vai substituir você, mas quem souber USÁ-LA vai te POTENCIALIZAR! Ela multiplica sua produtividade, permite que você entregue mais valor em menos tempo e o destaca como um profissional INDISPENSÁVEL no mercado do futuro.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CHAMADA FINAL -->
-        <section class="py-16 text-center bg-gradient-to-r from-blue-700 to-indigo-800 text-white rounded-2xl shadow-xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-                Sua Transformação Profissional Inacreditável Está a UM CLIQUE de Distância!
+    <!-- Seção Dores/Desafios -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                Você se identifica com esta DOR?
             </h2>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-10 opacity-90 max-w-4xl mx-auto">
-                A revolução da IA já começou e está criando fortunas para quem agarra as oportunidades. Enquanto seus concorrentes ficam paralisados pelo medo, VOCÊ pode se posicionar como um ESPECIALISTA líder e surfar essa onda de crescimento que vai mudar sua vida. Clique no botão abaixo e comece HOJE mesmo sua jornada rumo à INDEPENDÊNCIA financeira com IA!
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                Você sabe que a Inteligência Artificial é a próxima onda, mas...
             </p>
-            <a href="https://pay.kiwify.com.br/OVhVViy" class="btn-primary inline-block text-xl sm:text-2xl lg:text-3xl transform hover:scale-105">
-                SIM! QUERO TRANSFORMAR MINHA CARREIRA COM IA AGORA!
-            </a>
-        </section>
 
-    </main>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <!-- Dor 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary hover:shadow-xl transition duration-300">
+                    <svg class="w-8 h-8 text-primary mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Complicação Técnica</h3>
+                    <p class="text-gray-600">Acha que precisa de código ou ser um expert em tecnologia para usar IA para lucrar.</p>
+                </div>
+                <!-- Dor 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary hover:shadow-xl transition duration-300">
+                    <svg class="w-8 h-8 text-primary mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2v5m0 0l-4 4m4-4l4 4"></path></svg>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Medo de Ficar para Trás</h3>
+                    <p class="text-gray-600">Vê outras pessoas faturando e sente que está perdendo a "próxima grande oportunidade".</p>
+                </div>
+                <!-- Dor 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary hover:shadow-xl transition duration-300">
+                    <svg class="w-8 h-8 text-primary mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Falta de Rota</h3>
+                    <p class="text-gray-600">Não sabe *quais* serviços de alto valor prestar nem *como* atrair os primeiros clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer class="text-center py-8 text-gray-500 text-sm">
-        <p>&copy; 2025 Ganhe Dinheiro com IA. Todos os direitos reservados.</p>
+    <!-- Seção Solução/Destaque do Ebook -->
+    <section class="py-20 bg-dark-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight text-secondary">
+                Este é o seu atalho!
+            </h2>
+            <p class="text-xl text-indigo-200 max-w-4xl mx-auto mb-12">
+                No Ebook <span class="font-bold text-white">"Ganhe Dinheiro com IA: Guia Prático para Prestar Serviços Online de Alto Valor"</span>, você vai direto ao ponto, sem enrolação e sem jargões técnicos.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefício 1: Renda -->
+                <div class="p-6 bg-gray-700/50 rounded-xl shadow-xl border-b-4 border-secondary">
+                    <p class="text-4xl font-extrabold text-secondary mb-2">R$100-R$300/Dia</p>
+                    <p class="text-lg font-semibold">O caminho para uma renda diária e crescente com serviços simples de IA.</p>
+                </div>
+                <!-- Benefício 2: Facilidade -->
+                <div class="p-6 bg-gray-700/50 rounded-xl shadow-xl border-b-4 border-secondary">
+                    <p class="text-4xl font-extrabold text-secondary mb-2">Qualquer Pessoa</p>
+                    <p class="text-lg font-semibold">Conteúdo super fácil de entender, cheio de exemplos reais, pronto para aplicar.</p>
+                </div>
+                <!-- Benefício 3: Liberdade -->
+                <div class="p-6 bg-gray-700/50 rounded-xl shadow-xl border-b-4 border-secondary">
+                    <p class="text-4xl font-extrabold text-secondary mb-2">Trabalho Flexível</p>
+                    <p class="text-lg font-semibold">Trabalhe de casa, no seu ritmo, com liberdade geográfica e de horários.</p>
+                </div>
+                 <!-- Benefício 4: Aplicável -->
+                <div class="p-6 bg-gray-700/50 rounded-xl shadow-xl border-b-4 border-secondary">
+                    <p class="text-4xl font-extrabold text-secondary mb-2">Serviços de Alto Valor</p>
+                    <p class="text-lg font-semibold">Foque apenas nos serviços que os clientes mais precisam e que pagam melhor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Bônus Imperdível (Ponto de Venda Forte) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between bg-primary p-8 md:p-12 rounded-2xl shadow-2xl">
+                
+                <div class="md:w-7/12 text-white">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 leading-snug">
+                        <span class="text-secondary block mb-1">BÔNUS IMPERDÍVEL:</span>
+                        30 Prompts Testados e Validados!
+                    </h2>
+                    <p class="text-xl text-indigo-100">
+                        Isso não é só um e-book, é um <span class="font-bold">Kit de Início Imediato</span>. Junto com o Guia, você receberá de <span class="text-secondary font-extrabold">GRAÇA</span> o nosso catálogo de 30 Prompts prontos para você COPIAR e COLAR para:</p>
+                        <ul class="mt-4 space-y-2 list-none text-lg">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Gerar textos persuasivos para redes sociais.
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Criar ideias de imagens e logos rapidamente.
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                Otimizar tarefas de automação no seu dia a dia.
+                            </li>
+                        </ul>
+                </div>
+                
+                <div class="md:w-5/12 mt-8 md:mt-0 text-center">
+                    <p class="text-4xl sm:text-5xl font-extrabold text-secondary leading-none">30</p>
+                    <p class="text-2xl font-semibold text-white">Prompts Exclusivos</p>
+                    <!-- Placeholder para o bônus -->
+                    <div class="mx-auto w-32 h-32 bg-secondary/80 rounded-full flex items-center justify-center mt-4 p-4 shadow-xl">
+                        <svg class="w-16 h-16 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zm-5.602 10.58a1 1 0 01-.707.293h-1.6l-.39.39-1.99 1.99-1.414 1.414-.707.707 1.414 1.414.707-.707 1.414-1.414 1.99-1.99.39-.39h1.6a1 1 0 01.707.293l4-4a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-4 4a1 1 0 01-.707.293h-1.6l-2.002 2.002z"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Prova Social (Mock) -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-10">Quem já está faturando diz:</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <p class="italic text-gray-700 mb-4">"Eu era totalmente leigo, mas em 3 dias, já consegui meu primeiro cliente usando a estratégia de serviços simples. O retorno foi imediato!"</p>
+                    <p class="font-bold text-primary">- João P., Freelancer</p>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <p class="italic text-gray-700 mb-4">"O bônus de 30 Prompts vale mais que o preço do e-book. Acelerou meu processo de criação em 80%. Recomendo muito!"</p>
+                    <p class="font-bold text-primary">- Maria F., Empreendedora Digital</p>
+                </div>
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <p class="italic text-gray-700 mb-4">"Finalmente um guia prático que não fica só na teoria. O foco em serviços de alto valor fez toda a diferença na precificação."</p>
+                    <p class="font-bold text-primary">- Pedro R., Consultor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Final CTA -->
+    <section id="cta-section" class="py-16 bg-dark-bg text-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold mb-4 text-secondary leading-tight">
+                Sua Liberdade Financeira Começa Agora.
+            </h2>
+            <p class="text-xl text-indigo-200 mb-8">
+                Enquanto muita gente ainda duvida e espera, você pode estar usando IA para viver melhor e com uma renda crescente.
+            </p>
+
+            <div class="bg-white p-6 rounded-xl shadow-2xl text-gray-900 mx-auto max-w-sm w-full">
+                <p class="text-3xl font-bold mb-2">De R$ 97,00 por APENAS:</p>
+                <p class="text-6xl font-extrabold text-primary mb-6">
+                    <span class="text-3xl align-top">R$</span>15,99
+                </p>
+                <!-- CTA final atualizado para o link de pagamento -->
+                <a href="https://pay.kiwify.com.br/OVhVViy" class="btn-cta bg-secondary text-dark-bg font-extrabold text-2xl py-5 px-10 rounded-full w-full block text-center uppercase hover:bg-yellow-400">
+                    GARANTA O SEU AGORA!
+                </a>
+                <p class="text-sm text-gray-500 mt-4">Oferta válida por tempo limitado. Acesso imediato ao Ebook + Bônus após a compra.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simples -->
+    <footer class="bg-gray-900 py-6 text-center text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2025 Ganhe Dinheiro com IA. Todos os direitos reservados. | Termos de Uso | Política de Privacidade</p>
+        </div>
     </footer>
 
-    <script>
-        // JavaScript para o contador regressivo (simulado)
-        function startCountdown() {
-            const countdownElement = document.getElementById('countdown');
-            const targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 3); // 72 horas a partir de agora
-
-            const updateCountdown = () => {
-                const now = new Date().getTime();
-                const distance = targetDate.getTime() - now;
-
-                if (distance < 0) {
-                    countdownElement.innerHTML = "<span class='text-red-500'>Oferta Expirada!</span>";
-                    clearInterval(interval);
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                countdownElement.innerHTML = `
-                    <div><span>${days}</span><small>Dias</small></div>
-                    <div><span>${hours}</span><small>Horas</small></div>
-                    <div><span>${minutes}</span><small>Minutos</small></div>
-                    <div><span>${seconds}</span><small>Segundos</small></div>
-                `;
-            };
-
-            const interval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to display immediately
-        }
-
-        // Start countdown when the window loads
-        window.onload = startCountdown;
-    </script>
 </body>
 </html>
